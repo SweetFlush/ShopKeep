@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: c5ed0d8d866c6e947ac713db6f7b192e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - pfItemWorld: {instanceID: 0}
+  - basicSwordSprite: {fileID: 21300000, guid: 7d357f5d076df6948aad9163ecbdfc41, type: 3}
+  - advancedSwordSprite: {fileID: 21300000, guid: 392359e4dd0e91645ac4e37b55000efd, type: 3}
+  - emeraldSwordSprite: {fileID: 21300000, guid: 76730d5666084734b9b59bcf01779d7e, type: 3}
+  - potionSprite: {fileID: 21300000, guid: e00f162106e386a46b8ee95610c5efa9, type: 3}
+  - tableSprite: {fileID: 21300000, guid: 70abd18a3cae7714a945718a744a2e48, type: 3}
+  - weaponHangerSprite: {fileID: 21300000, guid: 93dbed5672045e2429db3ff5a7313bf4, type: 3}
+  - potionStorageSprite: {fileID: 21300000, guid: 07dc723fd7287cf48b5b07cc613e5ab7, type: 3}
+  - basicSwordModel: {fileID: -2432090755550338912, guid: b830215ce96c6c94b93d0f66983f87de, type: 3}
+  - advancedSwordModel: {fileID: -2432090755550338912, guid: 3fc0f66e3e653d6488b8b3b5b2bb29c9, type: 3}
+  - emeraldSwordModel: {fileID: -2432090755550338912, guid: 5707f033fad8bae49a65c79ce922b550, type: 3}
+  - potionModel: {fileID: -2432090755550338912, guid: 99cb6f3e233f8034f917f0f055f6b589, type: 3}
+  - tableModel: {fileID: -2432090755550338912, guid: 805f391149164b74eb041d9d70cdf577, type: 3}
+  - weaponHangerModel: {fileID: -2432090755550338912, guid: ad6e567fa20abbb45ab447d1ec6fdbf2, type: 3}
+  - potionStorageModel: {fileID: -2432090755550338912, guid: 012bb28ec654686409eeb6026e8aea58, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weapon
+  - Monster
+  - Warrior
+  - Furniture
+  - Item
+  - EnemyBullet
+  - Good
+  - Wall
+  - Shop
+  - Table
+  - WeaponHanger
+  - PotionStorage
+  - DeadMonster
+  - Dead
+  - CashierZone
+  - HomeZone
+  - IdleElder
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Obstacle
+  - Ghost
+  - Good
+  - Evil
+  - Item
+  - DeadEvil
+  - DeadGood
+  - ElderMonster
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2694679599
+    locked: 0
