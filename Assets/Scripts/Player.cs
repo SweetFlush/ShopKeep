@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour, IShopCustomer
 
     private void FreezeRotation()
     {
-        rigid.angularVelocity = Vector3.zero;   //È¸Àü ¼Óµµ ¸ØÃã
+        rigid.angularVelocity = Vector3.zero;   //íšŒì „ ì†ë„ ë©ˆì¶¤
     }
 
     private void StoptoWall()
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour, IShopCustomer
         hAxis = Input.GetAxisRaw("Horizontal");
         vAxis = Input.GetAxisRaw("Vertical");
 
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized;//¹æÇâ°ªÀÌ 1·Î °íÁ¤µÈ º¤ÅÍ normalized
+        moveVec = new Vector3(hAxis, 0, vAxis).normalized;//ë°©í–¥ê°’ì´ 1ë¡œ ê³ ì •ëœ ë²¡í„° normalized
 
         if(!isFurniture && health > 0)
         {
@@ -109,12 +109,12 @@ public class Player : MonoBehaviour, IShopCustomer
         }
 
         if(health > 0)
-        transform.LookAt(transform.position + moveVec); //¹æÇâ ¹Ù¶óº¸±â
+        transform.LookAt(transform.position + moveVec); //ë°©í–¥ ë°”ë¼ë³´ê¸°
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();   //¾ÆÀÌÅÛÇÏ°í Ãæµ¹½Ã
+        ItemWorld itemWorld = collider.GetComponent<ItemWorld>();   //ì•„ì´í…œí•˜ê³  ì¶©ëŒì‹œ
         if(itemWorld != null)
         {
             inventory.AddItem(itemWorld.GetItem());
@@ -123,7 +123,7 @@ public class Player : MonoBehaviour, IShopCustomer
 
         else if (collider.tag == "EnemyBullet")
         {
-            Monster monster = collider.GetComponentInParent<Monster>(); //¸ó½ºÅÍÇÏ°í Ãæµ¹½Ã
+            Monster monster = collider.GetComponentInParent<Monster>(); //ëª¬ìŠ¤í„°í•˜ê³  ì¶©ëŒì‹œ
             if (!isDamage)
             {
                 StartCoroutine(OnDamage());
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour, IShopCustomer
         }
     }
 
-    private IEnumerator Revive(float reviveTime)   //ºÎÈ°
+    private IEnumerator Revive(float reviveTime)   //ë¶€í™œ
     {
         yield return new WaitForSeconds(reviveTime);
         transform.position = respawnZone.position;
@@ -166,7 +166,7 @@ public class Player : MonoBehaviour, IShopCustomer
         }
     }
 
-    private void Dead() //Á×´Â ¾×¼Ç
+    private void Dead() //ì£½ëŠ” ì•¡ì…˜
     {
         anim.SetTrigger("doDie");
         gameObject.layer = 13;
@@ -188,7 +188,7 @@ public class Player : MonoBehaviour, IShopCustomer
         gold += amount;
     }
 
-    public void BoughtItem(Item.ItemType itemType)  //¾ÆÀÌÅÛ ±¸¸Å
+    public void BoughtItem(Item.ItemType itemType)  //ì•„ì´í…œ êµ¬ë§¤
     {
         Debug.Log("you bought" + itemType);
 
@@ -230,7 +230,7 @@ public class Player : MonoBehaviour, IShopCustomer
         return inventory;
     }
 
-    private IEnumerator DrinkPotion()  //Ã¼·ÂÈ¸º¹ÀÌÆåÆ®
+    private IEnumerator DrinkPotion()  //ì²´ë ¥íšŒë³µì´í™íŠ¸
     {
         foreach (MeshRenderer mesh in meshes)
         {
@@ -244,7 +244,7 @@ public class Player : MonoBehaviour, IShopCustomer
             mesh.material.color = Color.white;
         }
 
-        UtilsClass.CreateWorldTextPopup("Æ÷¼ÇÀ» ¸¶½É", transform.position);
+        UtilsClass.CreateWorldTextPopup("í¬ì…˜ì„ ë§ˆì‹¬", transform.position);
         health = 200;
     }
 

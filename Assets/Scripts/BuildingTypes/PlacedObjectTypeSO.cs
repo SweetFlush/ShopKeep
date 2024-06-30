@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class PlacedObjectTypeSO : ScriptableObject  //¿ÀºêÁ§Æ® Å¸ÀÔ Á¤ÀÇ
+public class PlacedObjectTypeSO : ScriptableObject  //ì˜¤ë¸Œì íŠ¸ íƒ€ì… ì •ì˜
 {
-    public static Dir GetNextDir(Dir dir)   //¹æÇâÀüÈ¯
+    public static Dir GetNextDir(Dir dir)   //ë°©í–¥ì „í™˜
     {
         switch (dir) 
         {
@@ -17,7 +17,7 @@ public class PlacedObjectTypeSO : ScriptableObject  //¿ÀºêÁ§Æ® Å¸ÀÔ Á¤ÀÇ
         }
     }
 
-    public enum Dir //¹æÇâµé ¼Ó¼º°ª enum
+    public enum Dir //ë°©í–¥ë“¤ ì†ì„±ê°’ enum
     {
         Down,
         Left,
@@ -32,7 +32,7 @@ public class PlacedObjectTypeSO : ScriptableObject  //¿ÀºêÁ§Æ® Å¸ÀÔ Á¤ÀÇ
     public int height;
 
 
-    public int GetRotationAngle(Dir dir)    //¹æÇâÀÇ °ªÀ» °¢µµ°ªÀ¸·Î ¸®ÅÏ
+    public int GetRotationAngle(Dir dir)    //ë°©í–¥ì˜ ê°’ì„ ê°ë„ê°’ìœ¼ë¡œ ë¦¬í„´
     {
         switch (dir)
         {
@@ -44,7 +44,7 @@ public class PlacedObjectTypeSO : ScriptableObject  //¿ÀºêÁ§Æ® Å¸ÀÔ Á¤ÀÇ
         }
     }
 
-    public Vector2Int GetRotationOffset(Dir dir)    //È¸Àü½ÃÄ×À¸´Ï ¹°Ã¼ÀÇ ÁÂ¿ì ¼Ó¼º°ªµµ º¯°æ
+    public Vector2Int GetRotationOffset(Dir dir)    //íšŒì „ì‹œì¼°ìœ¼ë‹ˆ ë¬¼ì²´ì˜ ì¢Œìš° ì†ì„±ê°’ë„ ë³€ê²½
     {
         switch (dir)
         {
@@ -56,7 +56,7 @@ public class PlacedObjectTypeSO : ScriptableObject  //¿ÀºêÁ§Æ® Å¸ÀÔ Á¤ÀÇ
         }
     }
 
-    public List<Vector2Int> GetGridPositionList(Vector2Int offset, Dir dir) //¿ÀºêÁ§Æ®ÀÇ °¡·Î¼¼·Î Å©±â¿¡ °ü·ÃÇÑ ¸®½ºÆ®
+    public List<Vector2Int> GetGridPositionList(Vector2Int offset, Dir dir) //ì˜¤ë¸Œì íŠ¸ì˜ ê°€ë¡œì„¸ë¡œ í¬ê¸°ì— ê´€ë ¨í•œ ë¦¬ìŠ¤íŠ¸
     {
         List<Vector2Int> gridPositionList = new List<Vector2Int>();
         switch (dir)

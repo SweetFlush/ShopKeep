@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+Ôªøusing CodeMonkey.Utils;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
-using CodeMonkey.Utils;
 
 public class ItemWorld : MonoBehaviour
 {
@@ -26,7 +23,7 @@ public class ItemWorld : MonoBehaviour
 
     private Item item;
     private SpriteRenderer spriteRenderer;
-    private MeshFilter meshFilter;   //3D∏µ®
+    private MeshFilter meshFilter;   //3DÎ™®Îç∏
     private Light light;
     
 

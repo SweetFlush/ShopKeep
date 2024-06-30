@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +6,10 @@ public class Table : MonoBehaviour
 {
     private Item.ItemType item;
 
-    private int index;  //ÀÚ±â Å×ÀÌºí ¹øÈ£
-    private int myPotion;   //Æ÷¼Çº¸À¯·®
-    private int potionQuarter;  //Æ÷¼Ç 3À¸·Î ³ª´« ¸ò
-    private int potionRemain;   //Æ÷¼Ç ³ª¸ÓÁö
+    private int index;  //ìžê¸° í…Œì´ë¸” ë²ˆí˜¸
+    private int myPotion;   //í¬ì…˜ë³´ìœ ëŸ‰
+    private int potionQuarter;  //í¬ì…˜ 3ìœ¼ë¡œ ë‚˜ëˆˆ ëª«
+    private int potionRemain;   //í¬ì…˜ ë‚˜ë¨¸ì§€
 
     public Inventory inventory;
 
@@ -38,9 +38,9 @@ public class Table : MonoBehaviour
         potionQuarter = myPotion / 3;
         potionRemain = myPotion % 3;
 
-        //Å¹ÀÚ¹øÈ£ > Æ÷¼Ç¸ò = Æ÷¼Ç¸ò+1ÀÌ¸é »ý¼º°áÁ¤, ¸ò+1º¸´Ù¸¹À¸¸é ¾øÀ½.
-        //Å¹ÀÚ¹øÈ£ == Æ÷¼Ç¸ò = Å¹ÀÚ¿¡ Æ÷¼ÇÀÌ°¡µæÇÔ
-        //Å¹ÀÚ¹øÈ£ < Æ÷¼Ç¸ò = Æ÷¼Ç ÀÌ¹Ì °¡µæÇÔ
+        //íƒìžë²ˆí˜¸ > í¬ì…˜ëª« = í¬ì…˜ëª«+1ì´ë©´ ìƒì„±ê²°ì •, ëª«+1ë³´ë‹¤ë§Žìœ¼ë©´ ì—†ìŒ.
+        //íƒìžë²ˆí˜¸ == í¬ì…˜ëª« = íƒìžì— í¬ì…˜ì´ê°€ë“í•¨
+        //íƒìžë²ˆí˜¸ < í¬ì…˜ëª« = í¬ì…˜ ì´ë¯¸ ê°€ë“í•¨
 
         if (index+1 <= potionQuarter)
         {

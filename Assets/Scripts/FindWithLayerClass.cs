@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FindWithLayerClass : MonoBehaviour
-
 {
     public static FindWithLayerClass Instance { get; private set; }
 

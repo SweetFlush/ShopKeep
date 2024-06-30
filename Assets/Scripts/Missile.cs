@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,10 +8,10 @@ public class Missile : MonoBehaviour
     public int damage;
 
     private GameObject target;
-    public List<GameObject> attackTarget;   //°ø°İ ´ë»óµé ¸®½ºÆ®
-    private List<float> distanceList;       //´ë»óµé±îÁöÀÇ °Å¸®
-    private GameObject updatingTarget;      //°Å¸®¿¡ µû¶ó °ø°İ ´ë»ó ¾÷µ¥ÀÌÆ®
-    private float shortDis;                 //ÂªÀº °Å¸® ´ã´Â º¯¼ö
+    public List<GameObject> attackTarget;   //ê³µê²© ëŒ€ìƒë“¤ ë¦¬ìŠ¤íŠ¸
+    private List<float> distanceList;       //ëŒ€ìƒë“¤ê¹Œì§€ì˜ ê±°ë¦¬
+    private GameObject updatingTarget;      //ê±°ë¦¬ì— ë”°ë¼ ê³µê²© ëŒ€ìƒ ì—…ë°ì´íŠ¸
+    private float shortDis;                 //ì§§ì€ ê±°ë¦¬ ë‹´ëŠ” ë³€ìˆ˜
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -44,7 +44,7 @@ public class Missile : MonoBehaviour
         attackTarget = new List<GameObject>(GameObject.FindGameObjectsWithTag("Good"));
         foreach (GameObject g in attackTarget)
             distanceList.Add(0f);
-        shortDis = Vector3.Distance(gameObject.transform.position, attackTarget[0].transform.position); //Ã¹¹øÂ°¸¦ ShortDistance·Î Àâ¾ÆÁÖ±â
+        shortDis = Vector3.Distance(gameObject.transform.position, attackTarget[0].transform.position); //ì²«ë²ˆì§¸ë¥¼ ShortDistanceë¡œ ì¡ì•„ì£¼ê¸°
         distanceList[0] = shortDis;
 
         target = attackTarget[0];
@@ -53,7 +53,7 @@ public class Missile : MonoBehaviour
     public Transform UpdateTarget()
     {
         int n = 0;
-        foreach (GameObject found in attackTarget)  //¾îÅÃ Å¸°ÙµéÀÇ °ÔÀÓ¿ÀºêÁ§Æ®µé¿¡¼­
+        foreach (GameObject found in attackTarget)  //ì–´íƒ íƒ€ê²Ÿë“¤ì˜ ê²Œì„ì˜¤ë¸Œì íŠ¸ë“¤ì—ì„œ
         {
             if (found == null)
             {
@@ -61,23 +61,23 @@ public class Missile : MonoBehaviour
                 attackTarget.Remove(found);
             }
 
-            //ÇöÀçÀÇ °Å¸®¸¦ °è»êÇÏ¿© ÀúÀå
+            //í˜„ì¬ì˜ ê±°ë¦¬ë¥¼ ê³„ì‚°í•˜ì—¬ ì €ì¥
             distanceList[attackTarget.IndexOf(found)] = Vector3.Distance(gameObject.transform.position, found.transform.position);
         }
 
-        foreach (float distance in distanceList)    //¸ğµç °Å¸®°ªÀ» È®ÀÎÇÏ¿© ÃÖ¼Ò°Å¸® ±¸ÇÑ´Ù
+        foreach (float distance in distanceList)    //ëª¨ë“  ê±°ë¦¬ê°’ì„ í™•ì¸í•˜ì—¬ ìµœì†Œê±°ë¦¬ êµ¬í•œë‹¤
         {
             if (distance < shortDis)
             {
                 int index = distanceList.IndexOf(distance);
-                shortDis = distance;    //ÃÖ¼Ò°Å¸®¸¦ distance·Î
+                shortDis = distance;    //ìµœì†Œê±°ë¦¬ë¥¼ distanceë¡œ
                 updatingTarget = attackTarget[index];
             }
             else
                 n++;
         }
 
-        if (n == attackTarget.Count) //Ä«¿îÆ® ´ÙÇß´Âµ¥µµ °¡±î¿î°Ô ¾øÀ¸¸é
+        if (n == attackTarget.Count) //ì¹´ìš´íŠ¸ ë‹¤í–ˆëŠ”ë°ë„ ê°€ê¹Œìš´ê²Œ ì—†ìœ¼ë©´
         {
             shortDis = 100000f;
             n = 0;

@@ -1,4 +1,4 @@
-
+Ôªø
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,13 +23,13 @@ public class Dyeo : MonoBehaviour
         hAxis = Input.GetAxisRaw("Horizontal");
         vAxis = Input.GetAxisRaw("Vertical");
 
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized;//πÊ«‚∞™¿Ã 1∑Œ ∞Ì¡§µ» ∫§≈Õ normalized
+        moveVec = new Vector3(hAxis, 0, vAxis).normalized;//Î∞©Ìñ•Í∞íÏù¥ 1Î°ú Í≥†Ï†ïÎêú Î≤°ÌÑ∞ normalized
 
         transform.position += moveVec * speed * Time.deltaTime;
 
         anim.SetBool("isWalk", moveVec != Vector3.zero);
 
-        transform.LookAt(transform.position + moveVec); //πÊ«‚ πŸ∂Û∫∏±‚
+        transform.LookAt(transform.position + moveVec); //Î∞©Ìñ• Î∞îÎùºÎ≥¥Í∏∞
     }
 }
 

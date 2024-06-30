@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,7 +26,7 @@ public class BirdStatue : MonoBehaviour
     {
         if (collider.tag == "EnemyBullet")
         {
-            Monster monster = collider.GetComponentInParent<Monster>(); //¸ó½ºÅÍÇÏ°í Ãæµ¹½Ã
+            Monster monster = collider.GetComponentInParent<Monster>(); //ëª¬ìŠ¤í„°í•˜ê³  ì¶©ëŒì‹œ
             if (!isDamage)
             {
                 StartCoroutine(OnDamage());
@@ -44,7 +44,7 @@ public class BirdStatue : MonoBehaviour
     private IEnumerator OnDamage()
     {
         isDamage = true;
-        if (health > 0)     //ÇÇ°¡ 0º¸´Ù ¸¹À¸¸é ÇÇ°Ý¾×¼Ç
+        if (health > 0)     //í”¼ê°€ 0ë³´ë‹¤ ë§Žìœ¼ë©´ í”¼ê²©ì•¡ì…˜
         {
             mesh.material.color = Color.red;
 

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -36,7 +36,7 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
     }
 
-    private void RefreshInventoryItems()    //ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ¸®ÇÁ·¹½¬
+    private void RefreshInventoryItems()    //ì¸ë²¤í† ë¦¬ ì•„ì´í…œ ë¦¬í”„ë ˆì‰¬
     {
         foreach (Transform child in itemSlotContainer)
         {
@@ -48,16 +48,16 @@ public class UI_Inventory : MonoBehaviour
         int y = 0;
         float itemSlotCellSize = 120f;
 
-        foreach (Item item in inventory.GetItemList())  //¸®½ºÆ® °¹¼ö¿¡ ¸ÂÃß¾î itemSlot »ı¼ºÇÏ¿© ³ª¿­
+        foreach (Item item in inventory.GetItemList())  //ë¦¬ìŠ¤íŠ¸ ê°¯ìˆ˜ì— ë§ì¶”ì–´ itemSlot ìƒì„±í•˜ì—¬ ë‚˜ì—´
         {
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //¿ŞÅ¬¸¯ ¾ÆÀÌÅÛ »ç¿ë
+            itemSlotRectTransform.GetComponent<Button_UI>().ClickFunc = () =>   //ì™¼í´ë¦­ ì•„ì´í…œ ì‚¬ìš©
             {
                 inventory.UseItem(item);
             };
-            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => //¿ìÅ¬¸¯ ¾ÆÀÌÅÛ µå¶ø
+            itemSlotRectTransform.GetComponent<Button_UI>().MouseRightClickFunc = () => //ìš°í´ë¦­ ì•„ì´í…œ ë“œë
             {
                 Item duplicateItem = new Item { itemType = item.itemType, amount = 1 };
                 if(item.amount > 1)
